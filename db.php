@@ -32,25 +32,14 @@ $sql = "CREATE TABLE users (
 );
 
 CREATE TABLE cars (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    make VARCHAR(50) NOT NULL,
+    company_name VARCHAR(50) NOT NULL,
     model VARCHAR(50) NOT NULL,
-    year INT NOT NULL,
-    transmission VARCHAR(20) NOT NULL,
-    rental_price DECIMAL(10, 2) NOT NULL,
-    availability BOOLEAN DEFAULT 1
+    seat INT(11)
+
 );
 
 CREATE TABLE bookings (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT NOT NULL,
-    car_id INT NOT NULL,
-    start_date DATE NOT NULL,
-    end_date DATE NOT NULL,
-    total_price DECIMAL(10, 2) NOT NULL,
-    booked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (car_id) REFERENCES cars(id) ON DELETE CASCADE
+           
 )";
 
 if ($conn->multi_query($sql) === TRUE) {
