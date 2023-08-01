@@ -32,13 +32,10 @@ $sql = "CREATE TABLE users (
 );
 
 CREATE TABLE cars (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    make VARCHAR(50) NOT NULL,
-    model VARCHAR(50) NOT NULL,
-    year INT NOT NULL,
-    transmission VARCHAR(20) NOT NULL,
-    rental_price DECIMAL(10, 2) NOT NULL,
-    availability BOOLEAN DEFAULT 1
+    company_name VARCHAR(50) NOT NULL,
+    model TEXT,
+    seat INT(11),
+    car_id INT(11)
 );
 
 CREATE TABLE bookings (
